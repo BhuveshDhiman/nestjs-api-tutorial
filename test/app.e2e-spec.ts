@@ -1,5 +1,6 @@
 import { INestApplication, ValidationPipe } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
+import * as pactum from "pactum";
 import { PrismaService } from "../src/prisma/prisma.service";
 import { AppModule } from "../src/app.module";
 
@@ -29,5 +30,33 @@ describe("App E2E", () => {
 		app.close();
 	});
 
-	it.todo("should pass");
+	describe("Auth", () => {
+		describe("Signup", () => {
+			it.todo("should signup");
+		});
+
+		describe("Signin", () => {
+			it.todo("should signin");
+		});
+	});
+
+	describe("User", () => {
+		describe("Get me", () => {});
+
+		describe("Edit user", () => {});
+	});
+
+	describe("Bookmarks", () => {
+		describe("Get bookmark", () => {});
+
+		describe("Create bookmarks", () => {});
+
+		describe("Get bookmarks", () => {});
+
+		describe("Get bookmark by ID", () => {});
+
+		describe("Edit bookmark", () => {});
+
+		describe("Delete bookmark", () => {});
+	});
 });
